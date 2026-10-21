@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Maple &amp; Moth Coffee — A Tiny Neighborhood Café</title>
+  <meta name="description" content="Maple &amp; Moth is a fictional neighborhood coffee shop. Browse the menu and filter it by coffee, tea, or bakes.">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#menu">Skip to the menu</a>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#top">
+        <span class="brand-mark" aria-hidden="true">M&amp;M</span>
+        <span class="brand-text">Maple &amp; Moth</span>
+      </a>
+      <nav aria-label="Main">
+        <ul class="nav-list">
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#visit">Visit</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero wrap" aria-labelledby="hero-title">
+      <p class="eyebrow">Fictional café · Riverside</p>
+      <h1 id="hero-title">Small cups, big <span class="squiggle">cinnamon</span> energy.</h1>
+      <p class="lede">
+        Maple &amp; Moth is a make-believe coffee shop on Lantern Lane. We steep
+        tea slowly, pull espresso loudly, and bake scones before the sun finds
+        the windows. Come for the cardamom knots; stay for the window seat.
+      </p>
+      <div class="hero-actions">
+        <a class="button button-primary" href="#menu">See the menu</a>
+        <a class="button button-ghost" href="#visit">Find our hours</a>
+      </div>
+      <div class="hero-blobs" aria-hidden="true"></div>
+    </section>
+
+    <section id="menu" class="wrap section" aria-labelledby="menu-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">What we make</p>
+          <h2 id="menu-title">The menu board</h2>
+        </div>
+        <p class="section-note">
+          Everything is invented, including the prices. Filter the board with
+          the buttons or your keyboard.
+        </p>
+      </div>
+
+      <div class="filters" role="group" aria-label="Filter menu items by category">
+        <button class="filter" type="button" data-filter="all" aria-pressed="true">All</button>
+        <button class="filter" type="button" data-filter="coffee" aria-pressed="false">Coffee</button>
+        <button class="filter" type="button" data-filter="tea" aria-pressed="false">Tea</button>
+        <button class="filter" type="button" data-filter="bakes" aria-pressed="false">Bakes</button>
+      </div>
+
+      <p class="filter-status" id="filter-status" role="status" aria-live="polite">
+        Showing all 8 menu items.
+      </p>
+
+      <ul class="menu-grid" id="menu-grid">
+        <li class="card" data-category="coffee">
+          <p class="card-tag">Coffee</p>
+          <h3>Mothwing Mocha</h3>
+          <p>Dark chocolate, a whisper of orange zest, and a double espresso under steamed milk.</p>
+          <p class="price">$5.25</p>
+        </li>
+        <li class="card" data-category="coffee">
+          <p class="card-tag">Coffee</p>
+          <h3>Maple Fog Latte</h3>
+          <p>Maple syrup, oat milk, and cinnamon, frothed until it feels like a blanket.</p>
+          <p class="price">$4.75</p>
+        </li>
+        <li class="card" data-category="coffee">
+          <p class="card-tag">Coffee</p>
+          <h3>Cold Brew No. 7</h3>
+          <p>An eighteen-hour steep with notes of cocoa and cherry. Served over one very cold cube.</p>
+          <p class="price">$4.50</p>
+        </li>
+        <li class="card" data-category="tea">
+          <p class="card-tag">Tea</p>
+          <h3>Honeysuckle Hush</h3>
+          <p>Chamomile and honeysuckle with a spoon of local honey. The quietest drink on the board.</p>
+          <p class="price">$4.00</p>
+        </li>
+        <li class="card" data-category="tea">
+          <p class="card-tag">Tea</p>
+          <h3>Smoky Orchard</h3>
+          <p>Lapsang souchong, dried apple, and clove. Tastes like a campfire that went to school.</p>
+          <p class="price">$4.25</p>
+        </li>
+        <li class="card" data-category="bakes">
+          <p class="card-tag">Bakes</p>
+          <h3>Brown Butter Scone</h3>
+          <p>Pear and ginger, baked at six in the morning and gone by eleven. No promises.</p>
+          <p class="price">$3.75</p>
+        </li>
+        <li class="card" data-category="bakes">
+          <p class="card-tag">Bakes</p>
+          <h3>Cardamom Knot</h3>
+          <p>Laminated dough, cardamom sugar, and an orange glaze that dries just enough.</p>
+          <p class="price">$4.25</p>
+        </li>
+        <li class="card" data-category="bakes">
+          <p class="card-tag">Bakes</p>
+          <h3>Midnight Brownie</h3>
+          <p>Espresso, sea salt, and a crackly top. Made without nuts, made with conviction.</p>
+          <p class="price">$3.50</p>
+        </li>
+      </ul>
+
+      <p class="empty-state" id="empty-state" hidden>
+        Nothing on the board in that category yet. Try another filter.
+      </p>
+    </section>
+
+    <section id="visit" class="wrap section" aria-labelledby="visit-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Come sit</p>
+          <h2 id="visit-title">Visit the shop</h2>
+        </div>
+      </div>
+      <div class="visit-grid">
+        <article class="panel">
+          <h3>Hours</h3>
+          <dl class="hours">
+            <div><dt>Monday–Friday</dt><dd>7:00 a.m.–6:00 p.m.</dd></div>
+            <div><dt>Saturday</dt><dd>8:00 a.m.–4:00 p.m.</dd></div>
+            <div><dt>Sunday</dt><dd>Closed (we are also asleep)</dd></div>
+          </dl>
+        </article>
+        <article class="panel">
+          <h3>Find us</h3>
+          <p>
+            48 Lantern Lane<br>
+            Riverside neighborhood<br>
+            <span class="muted">This address is fictional, like the coffee.</span>
+          </p>
+          <p>
+            Two steps at the entrance, a wide doorway, and a window seat that
+            fits one reader or two very polite friends.
+          </p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p>Maple &amp; Moth Coffee is a fictional business made for a class project.</p>
+      <p><a href="#top">Back to top</a></p>
+    </div>
+  </footer>
+</body>
+</html>
